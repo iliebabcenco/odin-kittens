@@ -1,0 +1,22 @@
+<br>
+<% unless @kittens.empty? %>
+<h2> There are all cuty kittens:</h2>
+<br>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Cuteness</th>
+        <th>Softness</th>
+        <th>Edit link</th>
+        <th>Remove link</th>
+    </tr>
+    <%= render @kittens%>
+
+</table>
+
+<% else %>
+<h2> There are no cuty kittens. Create one!</h2>
+<% end %>
+<%= link_to "Create a kitten!", new_kitten_path %>
