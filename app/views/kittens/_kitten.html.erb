@@ -1,0 +1,9 @@
+<tr>
+    <td><%= kitten.id %></td>
+    <td><%= link_to kitten.name, kitten_path(kitten.id) %></td>
+    <td><%= kitten.age %></td>
+    <td><%= kitten.cuteness %></td>
+    <td><%= kitten.softness %></td>
+    <td><%= link_to "Edit", edit_kitten_path(kitten.id) %></td>
+    <td><%= link_to "Delete", kitten_path(kitten.id), method: :delete %></td>
+<tr>

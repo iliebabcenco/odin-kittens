@@ -1,0 +1,27 @@
+<br>
+<br>
+
+<%= form_with model: @kitten do |a| %>
+
+<div class="field">
+    <%= a.text_field :name, required: true, placeholder: "Name", class:"form-control" %>
+</div>
+<br>
+<div class="field">
+    <%= a.number_field :age, required: true, placeholder: "Age", class:"form-control" %>
+</div>
+<br>
+<div class="field">
+    <%= a.number_field :cuteness, required: true, placeholder: "Cuteness", class:"form-control" %>
+</div>
+<br>
+<div class="field">
+    <%= a.number_field :softness, required: true, placeholder: "Softness", class:"form-control" %>
+</div>
+<br>
+<div class="d-flex justify-content-end">
+    <%= a.submit 'Execute', class: "btn-link add-link" %>
+</div>
+<br>
+<% end %>
+<%= link_to "Go to all kittens", kittens_path %>
