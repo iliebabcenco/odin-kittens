@@ -1,4 +1,9 @@
 <br>
+<% flash.each do |type, msg| %>
+<div>
+    <%= msg %>
+</div>
+<% end %>
 <% unless @kittens.empty? %>
 <h2> There are all cuty kittens:</h2>
 <br>

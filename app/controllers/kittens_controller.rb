@@ -1,9 +1,19 @@
 class KittensController < ApplicationController
     def index
         @kittens = Kitten.all
+        respond_to do |format|
+            format.html
+            format.xml  { render :xml => @kittens }
+            format.json { render :json => @kittens }
+        end
     end
     def show
         @kitten = Kitten.find(params[:id])
+        respond_to do |format|
+            format.html
+            format.xml  { render :xml => @kitten }
+            format.json { render :json => @kitten }
+        end
     end
     def new
         @kitten = Kitten.new
@@ -35,7 +45,7 @@ class KittensController < ApplicationController
     def destroy
         @kitten = Kitten.find(params[:id])
         if @kitten.destroy
-            redirect_to kittens_path, notice: "Kitten was removed"
+            redirect_to kittens_path, notice: "Kitten was removed successfuly"
         else
             render :index
         end

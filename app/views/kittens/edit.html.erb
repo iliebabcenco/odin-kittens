@@ -1,2 +1,5 @@
 <h3>Edit kitten</h3>
 <%= render "form", kitten: @kitten %>
+<br>
+<br>
+<%= link_to "Delete", kitten_path(@kitten.id), method: :delete %><br><br>
