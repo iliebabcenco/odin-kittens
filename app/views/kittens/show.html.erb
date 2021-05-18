@@ -1,0 +1,7 @@
+<br>
+<h4>There is our kitten: <%= @kitten.name %></h4>
+<p>It is <%= @kitten.age %> year's old with cuteness = <%= @kitten.cuteness %> and softness = <%= @kitten.softness %></p>
+<hr>
+<%= link_to "Go to all kittens", kittens_path %><br><br>
+<%= link_to "Edit", edit_kitten_path(@kitten.id) %><br><br>
+<%= link_to "Delete", kitten_path(@kitten.id), method: :delete %><br><br>
